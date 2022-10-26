@@ -22,5 +22,5 @@ zoomeye search 'title:"Log In -Confluence"' -num 800 -filter=ip,port
 
 
 
-
+pip install --upgrade censys
 

@@ -3,9 +3,9 @@ import shodan
 
 requests.packages.urllib3.disable_warnings()
 
-API_KEY = "YOUR_APIKEY"
+API_KEY = "Y3eCcLAZgj1sIcftPUiIW4zVONuYEfvj"
 
-SEARCH_FOR = 'http.favicon.hash:-305179312'
+SEARCH_FOR = 'services.http.response.html_title='WSO2 Management Console''
 f = open("urls.txt", "a")
 api = shodan.Shodan(API_KEY)
 result = api.search(SEARCH_FOR, limit=1000)

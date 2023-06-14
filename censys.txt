@@ -1,0 +1,8 @@
+Tip for Some internal assets
+
+Finding IP's of target.com
+censys search ' services.tls.certificates.leaf_data.subject.common_name: "target.com"' --index-type hosts | jq -c '.[] | {ip: .ip}' > ip.txt
+
+sed -i 's/[^0-9,.]*//g' output.txt
+
+naabu -iL output.txt

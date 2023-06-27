@@ -7,9 +7,12 @@ pip install --upgrade zoomeye
 
 pip install --upgrade shodan
 
+pip install -U urllib3 requests
+
 pip uninstall 
 
-zoomeye search 'title:Zimbra Web Client Sign In'  -num 3500  -filter=ip,port >> 1.txt
+
+zoomeye search 'title:"Zimbra Web Client Sign In"'  -num 3500  -filter=ip,port >> 1.txt
 
 
 

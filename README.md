@@ -1,6 +1,12 @@
 # search
 search zoomeye , shodan , censys
 
+pip install --upgrade censys
+
+pip install --upgrade zoomeye
+
+pip install --upgrade shodan
+
 zoomeye search 'title:Zimbra Web Client Sign In'  -num 3500  -filter=ip,port >> 1.txt
 
 
@@ -22,5 +28,5 @@ zoomeye search 'title:"Log In -Confluence"' -num 800 -filter=ip,port
 
 
 
-pip install --upgrade censys
+
 

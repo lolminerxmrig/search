@@ -7,6 +7,8 @@ pip install --upgrade zoomeye
 
 pip install --upgrade shodan
 
+pip uninstall 
+
 zoomeye search 'title:Zimbra Web Client Sign In'  -num 3500  -filter=ip,port >> 1.txt
 
 

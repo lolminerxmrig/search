@@ -12,9 +12,9 @@ while read -r line; do
   # Loop through each port and output the corresponding URL
   while read -r port; do
     if [ "$port" -eq 80 ]; then
-      echo "http://$ip:$port"
+      echo "http://$ip:$port" 
     elif [ "$port" -eq 443 ]; then
-      echo "https://$ip:$port"
+      echo "https://$ip:$port" 
     fi
   done <<< "$ports"
-done <<< "$censys_output"
+done <<< "$censys_output" > output.txt

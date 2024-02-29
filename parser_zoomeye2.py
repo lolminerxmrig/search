@@ -1,14 +1,23 @@
 import sys
 
+def process_line(line):
+    line = line.strip().replace('  ', ' ').replace(' ', ':')
+    return line
+
 try:
-    with open(sys.argv[1],"r") as f:
-        text = f.readlines()
+    input_file = sys.argv[1]
+    output_file = "2.txt" # Define the output file name
 
-    for i in text:
-        line = ":".join(i.split())
-        if "total" not in i and "ip" not in i:
-            print(line)
+    with open(input_file, 'r') as f:
+        lines = f.readlines()
 
-except:
-    print("Usage : python parse.py /path/to/file.txt")
+    with open(output_file, 'w') as f:
+        for line in lines:
+            if "total" not in line and "ip" in line and '*' not in line:
+                processed_line = process_line(line)
+                f.write(processed_line + '\n') # Write to the file with a newline
+
+except Exception as e:
+    print(f"Error: {e}")
+    print("Usage: python parse.py /path/to/1.txt")
     sys.exit(1)

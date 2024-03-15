@@ -1,6 +1,8 @@
 # search
 search zoomeye , shodan , censys
 
+apt-get install python3-pip
+
 pip install --upgrade censys
 
 pip install --upgrade zoomeye
@@ -13,7 +15,6 @@ pip uninstall
 
 
 zoomeye search 'title:"Zimbra Web Client Sign In"'  -num 3500  -filter=ip,port >> 1.txt
-
 
 
 shodan search 'http.favicon.hash:-305179312'  --fields ip_str,port --limit 500 --separator ":" | sed 's/.$//'
